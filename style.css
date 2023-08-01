@@ -26,21 +26,22 @@ header nav {
   margin: 0px auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 header nav ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  /* background-color: gray; */
   list-style: none;
+  overflow: hidden;
 }   
 header nav .logo{
     color: white;
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
-    margin-right: 200px;
 }
 
 header nav ul li a{
@@ -63,10 +64,36 @@ header nav ul li a:hover{
 }
 
 .contact-btn:hover{
-    padding: 8px 18px;
-    margin: 2px 2px;
+    background: linear-gradient(to right, rgb(0, 0, 218) 40%, blue 100%);
+    transition: all 0.2s ease-in-out;
 }
 
 .aBtn:hover{
     color:white
 }
+
+.sect{
+    background: powderblue;
+    height: 200vh;
+}
+
+@media screen and (max-width:1024px) {
+    header nav ul li a{
+        font-size: 1rem;
+        padding: 5px 15px;
+    }
+    .contact-btn{
+        padding: 5px 10px;
+    }
+    .sect{
+        background: rgb(141, 255, 130);
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .sect{
+        background: pink;
+    }
+}
+

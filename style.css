@@ -33,10 +33,12 @@ header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* background-color: gray; */
   list-style: none;
   overflow: hidden;
 }   
+
+
+
 header nav .logo{
     color: white;
     font-size: 1.5rem;
@@ -76,6 +78,14 @@ header nav ul li a:hover{
     background: powderblue;
     height: 200vh;
 }
+.bx-menu{
+    color:white;
+    font-size: 2.5rem;
+}
+
+.icon{
+    display: none;
+}
 
 @media screen and (max-width:1024px) {
     header nav ul li a{
@@ -95,5 +105,45 @@ header nav ul li a:hover{
     .sect{
         background: pink;
     }
-}
+    .icon{
+        display: block;
+    }
 
+    /* header nav ul{
+        display: none;
+    } */
+
+    header nav{
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+    ul {
+        position: absolute;
+        top: -1000%;
+        left: 0%;
+        width: 100%;
+        row-gap: 30px;
+        padding: 20px 0px;
+        flex-direction: column;
+        background: rgb(68, 66, 66);
+        transition: all 0.5s ease-in-out;
+        z-index: -1;
+      } 
+      .contact-btn{
+        background:transparent;
+      }
+
+      .contact-btn:hover{
+        background: transparent;
+    }
+
+    .aBtn:hover{
+        color: rgb(0, 0, 49);
+    }
+
+    #check:checked ~ ul{
+        top: 100%;
+    }
+
+}
